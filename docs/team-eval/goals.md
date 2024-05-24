@@ -1,6 +1,6 @@
 ---
 title: Goals
-parent: Team evaluations
+parent: Team evaluation
 nav_order: 1
 ---
 
