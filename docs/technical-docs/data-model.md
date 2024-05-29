@@ -9,10 +9,10 @@ He Wang
 
 # Data Model
 
-User (#UserID, #mail, password)
-Vehicle(#UserID, PlateNR)
-Role(#UserID, role)
-ParkingLot(#ParkinLotID, ParkingLotName)
-ParkingSpace(#ParkingLotID, #ParkingSpaceID, width, length, restrictions)
-Booking(#UserID, #ParkingLotID, timeStart, timeEnd)
+User (#UserID, #mail, password)<br>
+Vehicle(#UserID, PlateNR)<br>
+Role(#UserID, role)<br>
+ParkingLot(#ParkinLotID, ParkingLotName)<br>
+ParkingSpace(#ParkingLotID, #ParkingSpaceID, width, length, restrictions)<br>
+Booking(#UserID, #ParkingLotID, timeStart, timeEnd)<br>
 
