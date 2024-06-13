@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+
+        .login-form {
+            width: 100%;
+            max-width: 280px; /* Narrower form width */
+            padding: 10px; /* Minimal padding */
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-form img {
+            max-width: 50px; /* Smaller logo size */
+            margin-bottom: 10px; /* Reduced margin */
+        }
+
+        .login-form h2 {
+            margin-bottom: 10px; /* Small margin for compactness */
+            font-size: 1.25rem; /* Smaller font size */
+        }
+
+        .login-form .form-group {
+            margin-bottom: 10px; /* Reduced margin */
+        }
+
+        .login-form .form-control {
+            font-size: 0.75rem; /* Small font size */
+            padding: 5px 8px; /* Minimal padding */
+        }
+
+        .btn-block {
+            padding: 6px 8px; /* Small padding */
+            font-size: 0.75rem; /* Small font size */
+        }
+
+        .btn-block + .btn-block {
+            margin-top: 5px; /* Small space between buttons */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-form">
+        <!-- Logo Placeholder -->
+        <img src="/static/img/logo_white_bg-removebg-preview.png" alt="Logo" class="logo">
+        <h2 class="text-center">Login</h2>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <a href="/register" class="btn btn-secondary btn-block">Register</a>
+        </form>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
