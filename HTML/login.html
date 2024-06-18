@@ -1,49 +1,215 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkconnect</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+            font-family: Inter, sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .title {
+            width: 220px;
+            height: 67px;
+            position: absolute;
+            left: 389px;
+            top: 13px;
+            text-align: center;
+            color: #F2F2F2;
+            font-size: 36px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+        .title-background {
+            width: 259px;
+            height: 58px;
+            position: absolute;
+            left: 370px;
+            top: 10px;
+            background: #D50C2F;
+            border-radius: 1000px;
+            border: 1px solid black;
+        }
+        .header {
+            width: 303px;
+            height: 50px;
+            position: absolute;
+            left: -22px;
+            top: 90px;
+            text-align: center;
+            color: black;
+            font-size: 36px;
+            font-weight: 800;
+            word-wrap: break-word;
+        }
+        .input-group {
+            position: absolute;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 4px;
+        }
+        .input-label {
+            color: black;
+            font-size: 9px;
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1.80px;
+            word-wrap: break-word;
+        }
+        .input-field {
+            align-self: stretch;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+            justify-content: flex-start;
+            align-items: center;
+            display: inline-flex;
+        }
+        .input-field.normal {
+            border: 1px solid #A6A6A6;
+        }
+        .input-field.error {
+            border: 2px solid #EB5252;
+        }
+        .input-field.success {
+            border: 1px solid #41D32A;
+        }
+        .input-field.warning {
+            border: 2px solid #73A2FF;
+        }
+        .input-text {
+            flex: 1 1 0;
+            color: #A6A6A6;
+            font-size: 12px;
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+        .error-icon, .success-icon, .warning-icon {
+            width: 12px;
+            height: 12px;
+            position: relative;
+        }
+        .error-icon::before, .success-icon::before, .warning-icon::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            border-radius: 9999px;
+        }
+        .error-icon::before {
+            background: #EB5252;
+        }
+        .error-icon::after, .success-icon::after, .warning-icon::after {
+            content: '';
+            width: 5.71px;
+            height: 5.71px;
+            position: absolute;
+            background: white;
+        }
+        .error-icon::after {
+            left: 3.15px;
+            top: 3.15px;
+        }
+        .success-icon::before {
+            background: #3AD365;
+        }
+        .success-icon::after {
+            left: 2.65px;
+            top: 3.19px;
+            width: 6.74px;
+            height: 6.06px;
+        }
+        .warning-icon::before {
+            background: #404040;
+        }
+        .button {
+            width: 193px;
+            height: 65px;
+            position: absolute;
+            background: #D50C2F;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 1000px;
+            border: 1px solid black;
+        }
+        .button-text {
+            width: 96px;
+            height: 40px;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 16px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+        .logo {
+            width: 260px;
+            height: 79.81px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="https://via.placeholder.com/260x80" alt="Logo" />
+        <div class="title">Parkconnect</div>
+        <div class="title-background"></div>
+        <div class="header">Login</div>
 
-<div style="width: 100%; height: 100%; position: relative; background: white">
-    <img style="width: 260px; height: 79.81px; left: 0px; top: 0px; position: absolute" src="https://via.placeholder.com/260x80" />
-    <div style="width: 220px; height: 67px; left: 389px; top: 13px; position: absolute; text-align: center; color: #F2F2F2; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word">Parkconnect</div>
-    <div style="width: 259px; height: 58px; left: 370px; top: 10px; position: absolute; background: #D50C2F; border-radius: 1000px; border: 1px black solid"></div>
-    <div style="width: 303px; height: 50px; left: -22px; top: 90px; position: absolute; text-align: center; color: black; font-size: 36px; font-family: Inter; font-weight: 800; word-wrap: break-word">Login</div>
-    <div style="width: 200px; height: 54px; left: 507px; top: 328px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
-        <div style="color: black; font-size: 9px; font-family: Roboto; font-weight: 400; text-transform: uppercase; letter-spacing: 1.80px; word-wrap: break-word">Password</div>
-        <div style="align-self: stretch; padding: 8px; background: white; border-radius: 4px; border: 1px #41D32A solid; justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex">
-            <div style="flex: 1 1 0; color: #A6A6A6; font-size: 12px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Text field data</div>
-        </div>
-    </div>
-    <div style="height: 45px; left: 292px; top: 328px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
-        <div style="color: black; font-size: 9px; font-family: Roboto; font-weight: 400; text-transform: uppercase; letter-spacing: 1.80px; word-wrap: break-word">Password</div>
-        <div style="align-self: stretch; padding: 8px; background: white; border-radius: 4px; border: 2px #EB5252 solid; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-            <div style="flex: 1 1 0; color: #404040; font-size: 12px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Text field data</div>
-            <div style="width: 12px; height: 12px; position: relative">
-                <div style="width: 12px; height: 12px; left: 0px; top: 0px; position: absolute; background: #EB5252; border-radius: 9999px"></div>
-                <div style="width: 5.71px; height: 5.71px; left: 3.15px; top: 3.15px; position: absolute; background: white"></div>
+        <div class="input-group" style="left: 407px; top: 162px;">
+            <div class="input-label">Username</div>
+            <div class="input-field normal">
+                <div class="input-text">Text field data</div>
             </div>
         </div>
-    </div>
-    <div style="width: 193px; height: 65px; left: 407px; top: 397px; position: absolute; background: #D50C2F; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 1000px; border: 1px black solid"></div>
-    <div style="width: 96px; height: 40px; left: 455px; top: 422px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">Login</div>
-    <div style="height: 45px; left: 407px; top: 215px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
-        <div style="color: black; font-size: 9px; font-family: Roboto; font-weight: 400; text-transform: uppercase; letter-spacing: 1.80px; word-wrap: break-word">Password</div>
-        <div style="align-self: stretch; padding: 8px; background: white; border-radius: 4px; border: 1px #A6A6A6 solid; justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex">
-            <div style="flex: 1 1 0; color: #A6A6A6; font-size: 12px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Text field data</div>
+
+        <div class="input-group" style="left: 407px; top: 215px;">
+            <div class="input-label">Password</div>
+            <div class="input-field normal">
+                <div class="input-text">Text field data</div>
+            </div>
         </div>
-    </div>
-    <div style="height: 45px; left: 407px; top: 268px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
-        <div style="color: black; font-size: 9px; font-family: Roboto; font-weight: 400; text-transform: uppercase; letter-spacing: 1.80px; word-wrap: break-word">Password</div>
-        <div style="align-self: stretch; padding-left: 8px; padding-right: 8px; padding-top: 7px; padding-bottom: 7px; background: white; border-radius: 4px; border: 2px #73A2FF solid; justify-content: flex-start; align-items: center; gap: 1px; display: inline-flex">
-            <div style="color: #404040; font-size: 12px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Text field data</div>
-            <div style="width: 2px; height: 16px; background: #404040"></div>
+
+        <div class="input-group" style="left: 407px; top: 268px;">
+            <div class="input-label">Password</div>
+            <div class="input-field warning">
+                <div class="input-text">Text field data</div>
+                <div class="warning-icon"></div>
+            </div>
         </div>
-    </div>
-    <div style="height: 45px; left: 407px; top: 162px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex">
-        <div style="color: black; font-size: 9px; font-family: Roboto; font-weight: 400; text-transform: uppercase; letter-spacing: 1.80px; word-wrap: break-word">Username</div>
-        <div style="align-self: stretch; padding: 8px; background: white; border-radius: 4px; border: 1px #A6A6A6 solid; justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex">
-            <div style="flex: 1 1 0; color: #A6A6A6; font-size: 12px; font-family: Roboto; font-weight: 400; word-wrap: break-word">Text field data</div>
+
+        <div class="input-group" style="left: 292px; top: 328px;">
+            <div class="input-label">Password</div>
+            <div class="input-field error">
+                <div class="input-text">Text field data</div>
+                <div class="error-icon"></div>
+            </div>
         </div>
+
+        <div class="input-group" style="left: 507px; top: 328px;">
+            <div class="input-label">Password</div>
+            <div class="input-field success">
+                <div class="input-text">Text field data</div>
+            </div>
+        </div>
+
+        <div class="button" style="left: 407px; top: 397px;"></div>
+        <div class="button-text" style="left: 455px; top: 422px;">Login</div>
+        
+        <div class="success-icon" style="left: 689px; top: 351px;"></div>
     </div>
-    <div style="width: 12px; height: 12px; left: 689px; top: 351px; position: absolute">
-        <div style="width: 12px; height: 12px; left: 0px; top: 0px; position: absolute; background: #3AD365; border-radius: 9999px"></div>
-        <div style="width: 6.74px; height: 6.06px; left: 2.65px; top: 3.19px; position: absolute; background: white"></div>
-    </div>
-</div>
+</body>
+</html>
