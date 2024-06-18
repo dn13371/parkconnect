@@ -1,12 +1,109 @@
 <!DOCTYPE html>
-
-<div style="width: 100%; height: 100%; position: relative; background: white">
-    <div style="width: 220px; height: 67px; left: 390px; top: 22px; position: absolute; text-align: center; color: #F2F2F2; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word">Parkconnect</div>
-    <div style="width: 259px; height: 58px; left: 370px; top: 22px; position: absolute; background: #D50C2F; border-radius: 1000px; border: 1px black solid"></div>
-    <div style="width: 321px; height: 26px; left: 340px; top: 582px; position: absolute; text-align: center; color: black; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">by HWR-Students</div>
-    <div style="width: 192.50px; height: 80px; left: 404px; top: 322px; position: absolute; background: #D50C2F; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 1000px; border: 1px black solid"></div>
-    <div style="width: 96px; height: 40px; left: 453px; top: 353px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">Registration</div>
-    <div style="width: 192.50px; height: 80px; left: 405px; top: 195px; position: absolute; background: #D50C2F; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 1000px; border: 1px black solid"></div>
-    <div style="width: 96px; height: 40px; left: 453px; top: 227px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">Login</div>
-    <img style="width: 260px; height: 79.81px; left: 0px; top: 0px; position: absolute" src="https://via.placeholder.com/260x80" />
-</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parkconnect</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+            font-family: Inter, sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .title {
+            width: 220px;
+            height: 67px;
+            position: absolute;
+            left: 390px;
+            top: 22px;
+            text-align: center;
+            color: #F2F2F2;
+            font-size: 36px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+        .title-background {
+            width: 259px;
+            height: 58px;
+            position: absolute;
+            left: 370px;
+            top: 22px;
+            background: #D50C2F;
+            border-radius: 1000px;
+            border: 1px solid black;
+        }
+        .footer {
+            width: 321px;
+            height: 26px;
+            position: absolute;
+            left: 340px;
+            top: 582px;
+            text-align: center;
+            color: black;
+            font-size: 12px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+        .button {
+            width: 192.5px;
+            height: 80px;
+            position: absolute;
+            background: #D50C2F;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 1000px;
+            border: 1px solid black;
+        }
+        .button-text {
+            width: 96px;
+            height: 40px;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 16px;
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+        .registration {
+            left: 404px;
+            top: 322px;
+        }
+        .registration-text {
+            left: 453px;
+            top: 353px;
+        }
+        .login {
+            left: 405px;
+            top: 195px;
+        }
+        .login-text {
+            left: 453px;
+            top: 227px;
+        }
+        .logo {
+            width: 260px;
+            height: 79.81px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Parkconnect</div>
+        <div class="title-background"></div>
+        <div class="footer">by HWR-Students</div>
+        <div class="button registration"></div>
+        <div class="button-text registration-text">Registration</div>
+        <div class="button login"></div>
+        <div class="button-text login-text">Login</div>
+        <img class="logo" src="https://via.placeholder.com/260x80" alt="Logo" />
+    </div>
+</body>
+</html>
