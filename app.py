@@ -38,7 +38,15 @@ def login():
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
-        return f'Email: {email}, Password: {password}'
+
+        dbpass = db.session.query(User.password).filter(User.mail == email).scalar()
+        if dbpass:   
+            if dbpass == password: 
+                return "login success"
+        else: 
+            return "email not registered"
+        
+
     if request.method == 'GET':
         return render_template('base.html')
 
@@ -47,7 +55,22 @@ def register():
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
-        return f'Email: {email}, Password: {password}'
+        results = db.session.query(User).filter(User.mail == email).all()
+        if results :
+            return "mail already exists"
+        else:
+            user = User(
+                mail = email,
+                username= "default",
+                password= password, 
+                activated=False,
+                role=1  
+                )
+            db.session.add(user) 
+            db.session.commit()
+
+            return "user added successfully"
+        
     if request.method == 'GET':
         return render_template('register.html')
 
